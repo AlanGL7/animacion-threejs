@@ -1,5 +1,5 @@
 
-alert("Usa las teclas W A S D para rotar el cubo");
+alert("Usa las teclas W A S D para rotar el cubo y la barra espaciadora para restablecer la posición");
 
 
 const scene = new THREE.Scene();
@@ -40,6 +40,18 @@ document.onkeydown = function (e) {
     }
     if (e.keyCode == 68) {
     cube.rotation.y += 0.10;
+    }
+    if (e.keyCode == 32) {
+        if(cube.rotation.x != 0){
+            cube.rotation.x = 0;
+        }else{
+            
+        }
+        if(cube.rotation.y != 0){
+            cube.rotation.y = 0;
+        }else{
+            
+        }
     }
 
 }
